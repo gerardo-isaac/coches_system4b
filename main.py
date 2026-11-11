@@ -59,7 +59,7 @@ class App:
         self.asientos=Entry(self.ventana)
         self.asientos.pack(pady=5)
 
-        Button(self.ventana,text=":: Agregar ::",command=self.insertar_coche_controller).pack(pady=5)
+        Button(self.ventana,text=":: Agregar ::",command=lambda:{self.insertar_coche_controller(),self.insertar_coche_view()}).pack(pady=5)
 
         Button(self.ventana,text=":: Regresar ::",command=self.menu_acciones).pack(pady=5)
 
@@ -78,7 +78,7 @@ class App:
         self.id.focus()
         self.id.pack(pady=5)
 
-        Button(self.ventana,text=":: Eliminar ::",command=self.eliminar_coche_controller).pack(pady=5)
+        Button(self.ventana,text=":: Eliminar ::",command=lambda:{self.eliminar_coche_controller(),self.eliminar_coche_view()}).pack(pady=5)
 
         Button(self.ventana,text=":: Regresar ::",command=self.menu_acciones).pack(pady=5)
 
@@ -140,7 +140,7 @@ class App:
         self.asientos=Entry(self.ventana)
         self.asientos.pack(pady=5)
 
-        Button(self.ventana,text=":: Modificar ::",command=self.modificar_coche_controller).pack(pady=5)
+        Button(self.ventana,text=":: Modificar ::",command=lambda:{self.modificar_coche_controller(),self.modificar_coche_view()}).pack(pady=5)
 
         Button(self.ventana,text=":: Regresar ::",command=self.menu_acciones).pack(pady=5)
 
